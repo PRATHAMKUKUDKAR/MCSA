@@ -79,9 +79,18 @@
 6. click on right click
 7. clik on new
 8. clik on Text Document
-9. then create text Document `PK` and type some wods like welcome to nextGen
+9. then create text Document `PK` and type some words like welcome to nextGen and save it
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9fee7c2f-eb40-4223-8c4b-4aa8c08cae4a" />
 
+## verify
+1. go to server1
+2. login Microsoft/administrator user
+3. click on file explore icon
+4. go to local c
+5. click on Document folder i have manual create
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ba08e621-c4e8-43b3-9490-424d928e377e" />
+6. now see the HR1 folder for saving data in domain controlar server1
+<img width="1919" height="1076" alt="image" src="https://github.com/user-attachments/assets/4284b305-488e-4248-a7b0-8f27df831a6b" />
 
 
 
