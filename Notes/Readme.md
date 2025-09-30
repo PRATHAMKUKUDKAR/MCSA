@@ -528,4 +528,33 @@ Used for **security, restrictions, software deployment, and settings**.
 - Fast OS deployment.  
 - No USB/DVD required.  
 - Centralized image management.  
-- Supports automation.  
+- Supports automation.
+
+
+# 📌 Network Load Balancing (NLB)
+
+## 🔹 What is NLB?
+- Shares traffic between **multiple servers**.  
+- Used for **high availability** and **load distribution**.  
+
+---
+
+## 🔹 Key Points
+- If one server fails → others keep working.  
+- Works at **Layer 4 (Transport layer)**.  
+- Needs at least **2 servers** with static IPs.  
+
+---
+
+## 🔹 Benefits
+- High availability  
+- Scalability  
+- Better performance  
+
+---
+
+## 🔹 Uses
+- Web servers  
+- Application servers  
+- Remote Desktop / VPN servers  
+
