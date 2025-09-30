@@ -1,9 +1,5 @@
 # DFS Installation & Configuration — Step-by-step
 
-> **Purpose:** Install Distributed File System (DFS) roles, create a domain-based namespace, add folder targets, and verify access across **Server1**, **Server2**, and **Client1**. Follow every step exactly. Screenshots from the lab are included for guidance.
-
----
-
 ## Prerequisites
 
 - You must be a domain administrator (or have equivalent privileges).
