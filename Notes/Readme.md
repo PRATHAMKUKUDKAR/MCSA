@@ -570,3 +570,38 @@ Used for **security, restrictions, software deployment, and settings**.
 3. **Class C**
    - Clients from the **same subnet (Class C network)** are directed to the **same server**.
    - Useful for environments with many clients behind NAT.
+
+
+
+# 📌 DFS (Distributed File System)
+
+## 🔹 What is DFS?
+DFS is a **Windows Server feature** that lets you organize and share multiple folders from different servers into **one logical namespace** (like a virtual folder tree).
+
+---
+
+## 🔹 Types of DFS
+
+1. **DFS Namespace**
+   - Provides a **virtual folder structure**.
+   - Users see a single path (e.g., `\\domain\dfsroot`) even if files are on different servers.
+
+2. **DFS Replication**
+   - Keeps copies of folders **synchronized across servers**.
+   - Uses **multi-master replication** (changes can happen on any server).
+
+---
+
+## 🔹 Benefits
+- Centralized access (one namespace).  
+- High availability (if one server fails, another provides data).  
+- Load balancing (users can be directed to nearest server).  
+- Easy management of shared folders.
+
+---
+
+## 🔹 Example
+- Server1 has folder `HRDocs`.  
+- Server2 has folder `FinanceDocs`.  
+- Both are published under DFS namespace:  
+
