@@ -558,3 +558,15 @@ Used for **security, restrictions, software deployment, and settings**.
 - Application servers  
 - Remote Desktop / VPN servers  
 
+
+1. **None**
+   - Client requests go to **any server randomly**.
+   - Best for **stateless apps** (e.g., web browsing).
+
+2. **Single**
+   - All requests from the **same client IP** always go to the **same server**.
+   - Used when session data is stored locally (e.g., shopping cart).
+
+3. **Class C**
+   - Clients from the **same subnet (Class C network)** are directed to the **same server**.
+   - Useful for environments with many clients behind NAT.
