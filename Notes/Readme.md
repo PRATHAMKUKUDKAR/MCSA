@@ -585,23 +585,13 @@ DFS is a **Windows Server feature** that lets you organize and share multiple fo
 1. **DFS Namespace**
    - Provides a **virtual folder structure**.
    - Users see a single path (e.g., `\\domain\dfsroot`) even if files are on different servers.
+<img width="492" height="227" alt="image" src="https://github.com/user-attachments/assets/f3e3fb67-12f9-45cd-bca3-782fef68de5b" />
+
 
 2. **DFS Replication**
    - Keeps copies of folders **synchronized across servers**.
    - Uses **multi-master replication** (changes can happen on any server).
 
----
-
-## 🔹 Benefits
-- Centralized access (one namespace).  
-- High availability (if one server fails, another provides data).  
-- Load balancing (users can be directed to nearest server).  
-- Easy management of shared folders.
+<img width="504" height="224" alt="image" src="https://github.com/user-attachments/assets/1f5d1bd6-ffe9-406f-9318-0d5973da4bad" />
 
 ---
-
-## 🔹 Example
-- Server1 has folder `HRDocs`.  
-- Server2 has folder `FinanceDocs`.  
-- Both are published under DFS namespace:  
-
