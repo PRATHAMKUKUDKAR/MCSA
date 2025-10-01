@@ -468,6 +468,31 @@ When a client joins the network, it follows the **DORA** process:
 
 ---
 
+# 📌 Windows Deployment Services (WDS)
+
+## 🔹 What is WDS?
+- A Windows Server role used to **install OS over the network** (no CD/USB needed).  
+- Clients boot using **PXE (network boot)**.  
+
+---
+
+## 🔹 WDS Components
+- **Boot Image** → Starts client PC (WinPE).  
+- **Install Image** → Actual Windows OS.  
+- **Capture Image** → Capture reference OS.  
+- **Discover Image** → For non-PXE boot systems.  
+
+---
+
+## 🔹 How it Works
+1. Client PC boots with PXE.  
+2. Gets IP from DHCP.  
+3. Downloads boot image from WDS.  
+4. Selects OS → Installs from install image.  
+
+---
+
+
 # 📌 Network Load Balancing (NLB)
 
 ## 🔹 What is NLB?
