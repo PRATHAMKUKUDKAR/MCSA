@@ -31,7 +31,7 @@
 ### Sharing Permision
 
 1. Create folder CompanyData
-2. right click on Company Data
+2. right click on CompanyData
 3. go to properties
 4. click on sharing tab
 5. Tick on share this folder
@@ -97,63 +97,75 @@
 7. click on next
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/64f83386-086e-438c-b1cf-84e7c320026d" />
 
-8. Namespace name type `Company`
+8. Namespace name type `NextGen`
 9. click next
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c804dd7a-ea45-412c-b1eb-16620d10d990" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/998ed695-945e-46c4-8211-1342e3eb8d9d" />
 
-10. Namespace Type
-11. Domain Based Namespace
-12. click Next
-<img width="1902" height="1079" alt="image" src="https://github.com/user-attachments/assets/59421d45-da4d-4f29-bccd-65347a3829e2" />
-13. click on crete
+10. Select Domain Based Namespace
+11. click next
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b602650b-00de-4da7-b01f-cac7704de7f1" />
+12. click create
+
+## Add Second Namespace Server2
+1. right click on \\microsoft.com\Nextgen
+2. click on Add namespace server
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/bd2279c0-02be-4318-b175-e83d84fbd514" />
+3. type namespace server `server2`
+4. click ok
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/2fd05148-2f5e-4327-82ac-bf790dacb7cf" />
+
+## Add Folder to Namespace
+1. right click on \\microsoft.com\Nextgen
+2. click on new folder
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1e60374d-ec98-48f2-ad3c-fa0f7ec87b96" />
+3. Type Folder Name  `CompanyData`
+4. click on add
+5. type path to folder target:
+  - \\server1\CompanyData
+  - \\server2\CompanyData
+6. click ok
+<img width="1919" height="1072" alt="image" src="https://github.com/user-attachments/assets/08e53b8c-48a3-4629-85a8-287ec5530a70" />
 
 
 ## Configure DFS Replication
-1. Right click on replication
-2. create new replication group
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/42273196-4712-47c1-896c-67199eee1f27" />
+1. Redirect to Replicate folder wizard
+2. type replication group name
+  - \\microsoft.com\NextGen\CompanyData
+3. type replicated folder name
+ - CompanyData
+4. click next
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b7ba9ad2-9417-4233-a4cc-04bb7a49db21" />
 
-3. select Multipurpose Replication Group
-4. click Next
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/de2743c8-ceb1-4282-9e86-07de87d82b6a" />
+5. Replication eligibility click next
+6. select primary member
+ - server1
+7. click next
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/2209e942-f58f-43c8-886f-60e1e0dc97fe" />
+8. Topology selection select:
+   - Full mesh
 
-5. Name and Domain
-6. type name `CompanyDataReplication`
-7. click Next
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/be0c70f0-4495-462e-8d17-f01dc91d9cff" />
-
-8. Add Member `Server1` And `Server2`
-9. click on add
-10. type server1
-11. click on check name
-12. click on ok
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/0979ba62-a481-4cdd-9443-a44edb5ac05b" />
-
-13. Now see the servers servr1 and server2
-14. click next
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/060d6a22-c860-4534-adea-ac032ad49247" />
+9. click next
+10. Replication group shedul and bandwith select:
+ - Replicate continuously using the Secified bandwith
+11. select bandwith
+   - full
+<img width="1919" height="1076" alt="image" src="https://github.com/user-attachments/assets/fc00fc01-8546-4ee9-804a-6c4cc2f7c9ed" />
+12. click on next
+13. click on create 
+<img width="1919" height="1059" alt="image" src="https://github.com/user-attachments/assets/bfe15f46-c332-4bee-8e0e-5c5737522eed" />
 
 
-15. topology selection
-16. select full mash
-17. click on next
-<img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/caef229a-422e-49e8-9adf-504cf658ef12" />
+##  Verification
 
-18. Select Primary Member
-19. select Server1
-20. click next
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/925a9e36-1b2c-42a1-9b40-8d27e75660b8" />
+1. Go to Server1
+2. create textdocument under CopanyData
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ce2bc54d-7e72-4ebb-b426-20b1d26a1c73" />
 
-21. Folder To replace
-22. selcet CompanyData Folder
-23. click on Next
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ad5509db-ac72-4b05-8444-892f7f833dc6" />
-
-24. click on edit
-25. click on enable
-26. select local path of folder
-27. C:\CompanyData
-28. click ok
-29. click next
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c13f6fd8-23ce-4e28-a49c-519c3543ee8b" />
-30. click on create
+3. Go to client1
+4. press window key + R
+ - type microsoft.com
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/bd2aa76d-6ff4-43c1-8b8e-531ede85d47d" />
+4. go to NextGen Folder
+5. go to CopmanyData Folder
+6. Now see the files
+<img width="1919" height="1050" alt="image" src="https://github.com/user-attachments/assets/d0b7eac5-589c-464b-b6b6-805af5164b60" />
