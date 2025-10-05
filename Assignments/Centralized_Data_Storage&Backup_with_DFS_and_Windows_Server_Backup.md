@@ -169,3 +169,56 @@
 5. go to CopmanyData Folder
 6. Now see the files
 <img width="1919" height="1050" alt="image" src="https://github.com/user-attachments/assets/d0b7eac5-589c-464b-b6b6-805af5164b60" />
+
+
+# Window server Backup
+
+## Install window Server Backup on Both Server1 and Server2
+1. go to server manager
+2. click on add role and feature
+3. until feature click next
+4. tick on window server backup
+5. click next
+6. click install
+<img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/bf0d68af-c1ba-4c59-ae38-82932d2c684c" />
+
+## Configuration
+1. Go to server manager
+2. click on tools
+3. click on window server backup
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/06af9b89-e044-463c-8ff0-8e2c59dbeedf" />
+
+4. Right click on local Backup
+5. Click on Backup shedual
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9d0e43ec-f722-4761-8099-c6fa747ec305" />
+6. Gating Started click next
+7. select backup configuration
+  - Custome
+8. click next
+<img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/48485a13-7702-4fa1-89e5-a0499e9f628e" />
+9. Select itom for Backup
+10. click on add item
+    - go to Local disk c
+    - select companyData
+11. click on ok
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/feedffd2-e33f-47f0-9109-b6445d4b83ff" />
+12. click on next
+13. specify backup time
+ - clickon ones a day
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/84f366e0-0a20-43be-a8a6-f06b917516f7" />
+
+14. bckup specify destination
+  - select backup to hard disk that is dedicated For backup (Recomended)
+15. click next
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4232f598-67b7-4056-8ca4-7b926c6f776d" />
+
+16. click on show all avalable disks
+  - select E disks
+17. click ok
+<img width="1856" height="1000" alt="image" src="https://github.com/user-attachments/assets/93dbc6bf-d599-40e3-8342-f7a3f0c917f0" />
+18. click next
+19. click finish
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/48d22286-1cef-4cc7-87b5-ca0b4e417847" />
+
+20. Now you can seen succesfull backup
+<img width="1919" height="1001" alt="image" src="https://github.com/user-attachments/assets/2769bca3-515f-48ba-b351-ceddd786dcea" />
