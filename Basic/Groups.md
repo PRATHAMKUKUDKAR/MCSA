@@ -1,3 +1,6 @@
+# chaild Domain and Groups
+
+
 # Create users on both domain parent is amazon.com chaild is AWS.amazon.com
 
 ## create 5 users in machine1 amazon.com (parent)
