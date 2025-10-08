@@ -616,3 +616,100 @@ Instead of granting permissions one by one:
 * Useful for **security**, **access control**, and **email communication**.
 * Best practice: Use **security groups** for permissions and **distribution groups** for communication.
 ---
+
+# 🌐 Universal, Global, and Domain Local Groups in Active Directory
+
+Active Directory (AD) allows three main types of **group scopes**:
+**Universal**, **Global**, and **Domain Local** — each defines **where** and **how** a group can be used in the domain or forest.
+
+---
+
+## 🧩 1. Global Group
+
+* Used to **group users** from the **same domain**.
+* Can be assigned permissions in **any domain** within the forest.
+* ✅ Best for grouping **users** by department or role.
+
+**Example:**
+
+* Global Group: `Sales_Global`
+* Members: Users from `Sales` domain only.
+* Access: Can be granted permissions to resources in another domain (e.g., `Finance` domain).
+
+**Usage Tip:**
+
+> Use Global groups to organize **users** with similar job functions.
+
+---
+
+## 🏢 2. Domain Local Group
+
+* Used to assign permissions to **resources** within the **same domain**.
+* Can include users and groups from **any domain** in the forest.
+* ✅ Best for grouping **resources**.
+
+**Example:**
+
+* Domain Local Group: `HR_Share_Access`
+* Members: Users from multiple domains.
+* Resource: `\\Server1\HRData` in the HR domain.
+
+**Usage Tip:**
+
+> Use Domain Local groups to assign **permissions** on shared folders, printers, etc.
+
+---
+
+## 🌍 3. Universal Group
+
+* Used to group users, groups, and computers from **any domain** in the **forest**.
+* Ideal for **large organizations** with multiple domains.
+* Stored in the **Global Catalog**, making them available across all domains.
+
+**Example:**
+
+* Universal Group: `Company_All_Staff`
+* Members: Users from HR, IT, and Sales domains.
+* Access: Granted to global resources like intranet or shared applications.
+
+**Usage Tip:**
+
+> Use Universal groups for **forest-wide access** or **email distribution lists**.
+
+---
+
+## 🔁 Best Practice (AGDLP Model)
+
+A common Microsoft recommendation for organizing groups:
+
+```
+A → G → DL → P
+```
+
+* **A** = Accounts (Users)
+* **G** = Global Groups
+* **DL** = Domain Local Groups
+* **P** = Permissions
+
+👉 Add **users** to a **Global Group**,
+then add that **Global Group** to a **Domain Local Group**,
+and assign **permissions** to the Domain Local Group.
+
+---
+
+## 🧠 Summary Table
+
+| Group Type       | Members From | Permission Scope | Best Used For          |
+| ---------------- | ------------ | ---------------- | ---------------------- |
+| **Global**       | Same domain  | Any domain       | Organize users         |
+| **Domain Local** | Any domain   | Same domain      | Assign resource access |
+| **Universal**    | Any domain   | Entire forest    | Cross-domain access    |
+
+---
+
+✅ **In short:**
+
+* **Global = Users**
+* **Domain Local = Resources**
+* **Universal = Organization-wide access**
+---
