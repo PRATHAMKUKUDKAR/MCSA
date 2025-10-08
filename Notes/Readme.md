@@ -557,3 +557,62 @@ DFS is a **Windows Server feature** that lets you organize and share multiple fo
 <img width="504" height="224" alt="image" src="https://github.com/user-attachments/assets/1f5d1bd6-ffe9-406f-9318-0d5973da4bad" />
 
 ---
+
+
+# 🧩 What is a Group in Windows Server
+
+A **Group** is a collection of users that helps manage permissions, access, and policies **more easily**.
+Instead of assigning permissions to each user individually, you can assign them to a group — and all members inherit those permissions.
+
+---
+
+## 🧠 Types of Groups
+
+### 1. Security Group
+
+* Used to **assign permissions** to resources (files, folders, printers, etc.).
+* Example:
+
+  * **Group Name:** `HR-Team`
+  * **Members:** HR employees
+  * **Access:** Read/Write access to `\\Server1\HRData`
+
+### 2. Distribution Group
+
+* Used for **email distribution** (e.g., in Exchange or Outlook).
+* Example:
+
+  * **Group Name:** `All-Employees`
+  * **Purpose:** Send one email to everyone at once.
+
+---
+
+## 🌍 Group Scope Types (in AD Domain)
+
+| Scope Type       | Description                                                                        |
+| ---------------- | ---------------------------------------------------------------------------------- |
+| **Domain Local** | Used to assign access to resources **within the same domain**.                     |
+| **Global**       | Contains users from the same domain and can be given permissions in other domains. |
+| **Universal**    | Can include users/groups from **any domain** in the forest.                        |
+
+---
+
+## ⚙️ Example
+
+You have 10 users in the **Finance** department.
+Instead of granting permissions one by one:
+
+1. Create a group named **Finance_Group**.
+2. Add all Finance users to that group.
+3. Give **Finance_Group** access to the Finance shared folder.
+
+✅ All members now have the same access automatically.
+
+---
+
+## 🪄 Summary
+
+* Groups make **administration easier and faster**.
+* Useful for **security**, **access control**, and **email communication**.
+* Best practice: Use **security groups** for permissions and **distribution groups** for communication.
+---
