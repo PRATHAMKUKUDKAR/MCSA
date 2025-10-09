@@ -713,3 +713,108 @@ and assign **permissions** to the Domain Local Group.
 * **Domain Local = Resources**
 * **Universal = Organization-wide access**
 ---
+
+# 📂 Active Directory Partitions
+
+Active Directory stores its data in different **partitions**.  
+Each partition has a specific purpose and replication scope.
+
+---
+
+## 🔑 Types of Partitions
+
+### 1. **Schema Partition**
+- Defines **object types** and their **attributes**.  
+- Example: User, Computer, Group, Printer.  
+- Replicated to **all Domain Controllers** in the **forest**.
+
+---
+
+### 2. **Configuration Partition**
+- Contains **forest-wide configuration** data:  
+  - Sites  
+  - Services  
+  - Replication topology  
+- Replicated to **all Domain Controllers** in the **forest**.
+
+---
+
+
+### 3. **Domain Partition**
+- Contains **domain-specific data**:  
+  - Users  
+  - Groups  
+  - Computers  
+  - Organizational Units (OUs)  
+- Replicated only to **Domain Controllers in the same domain**.
+
+---
+
+### 4. **Application Partition**
+- Stores **application/service-specific data**.  
+- Example: DNS zones (AD Integrated DNS).  
+- Replicated only to **specific Domain Controllers**, not the entire forest.
+
+---
+
+## 🧠 Easy Way to Remember
+- **Schema** → *What can be created* (structure of objects).  
+- **Configuration** → *How AD works* (settings & topology).  
+- **Domain** → *What is created* (users, groups, computers).  
+- **Application** → *Extra data* (DNS, apps).  
+
+---
+
+## 📌 Example
+If the domain is **`cisco.com`**:
+- **Schema** defines what a "User" object looks like.  
+- **Configuration** defines replication links between servers.  
+- **Domain** stores users like *John, HR1, RMG1*.  
+- **Application** stores DNS zone data like *cisco.com records*.  
+
+---
+
+
+# 🖥️ FSMO Roles (Flexible Single Master Operations)
+
+## 🔹 What are FSMO Roles?
+- Special roles in **Active Directory** that only **one Domain Controller (DC)** can hold at a time.  
+- Prevent conflicts and maintain consistency in the domain/forest.
+
+---
+
+## 🔹 Types of FSMO Roles (5 Total)
+
+### 🏛 Forest-wide Roles (2)
+1. **Schema Master**  
+   - Controls **AD schema updates** (adding new object types/attributes).  
+   - Only ONE in the entire **forest**.  
+
+2. **Domain Naming Master**  
+   - Controls **adding/removing domains** in the forest.  
+   - Only ONE in the entire **forest**.  
+
+---
+
+### 🏠 Domain-wide Roles (3)
+1. **RID Master (Relative ID Master)**  
+   - Assigns **unique IDs** to objects (like users, groups).  
+   - One per **domain**.  
+
+2. **PDC Emulator (Primary Domain Controller)**  
+   - Handles **time sync, password changes, backward compatibility with NT4**.  
+   - Important for **user logon**.  
+   - One per **domain**.  
+
+3. **Infrastructure Master**  
+   - Updates **group-to-user references** across domains.  
+   - One per **domain**.  
+
+
+## 🔹 Quick Shortcut
+- **Forest Roles (2):** Schema Master, Domain Naming Master  
+- **Domain Roles (3):** RID Master, PDC Emulator, Infrastructure Master  
+
+👉 **2 Forest + 3 Domain = 5 FSMO Roles**
+
+---
