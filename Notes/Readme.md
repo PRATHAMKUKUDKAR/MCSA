@@ -818,3 +818,42 @@ If the domain is **`cisco.com`**:
 👉 **2 Forest + 3 Domain = 5 FSMO Roles**
 
 ---
+
+
+# 🔐 VPN (Virtual Private Network)
+
+## 📌 What is VPN?
+- A **secure tunnel** between your device and the internet/server.  
+- Encrypts data so no one can **spy or steal** information.  
+- Helps connect **remote users** to private networks (like office network).  
+
+---
+
+## 🔹 Types of VPN
+1. **Remote Access VPN**  
+   - Used by employees to connect to office network from home.  
+   - Example: Cisco AnyConnect, OpenVPN.  
+
+2. **Site-to-Site VPN**  
+   - Connects **two offices/networks** securely over the internet.  
+   - Example: Head Office ↔ Branch Office.  
+
+3. **Client-to-Site VPN**  
+   - User connects from laptop/PC to company server.  
+
+---
+
+## 📌 What is DirectAccess?
+- A feature in **Windows Server (2008 R2 and later)**.  
+- Provides **seamless remote connectivity** to corporate network **without manually starting VPN**.  
+- Always-on, secure connection using **IPv6 + IPsec**.  
+
+---
+
+## 🔹 How it Works
+- When laptop/PC connects to internet → It **automatically connects** to company network through **DirectAccess server**.  
+- Uses **IPv6 transition technologies** (6to4, Teredo, IP-HTTPS).  
+- Authentication via **Active Directory + Certificates**.  
+
+---
+
